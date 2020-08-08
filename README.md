@@ -31,6 +31,7 @@ CREATE TABLE employee(
     code VARCHAR(50),
     name VARCHAR(100)
 );
+INSERT INTO employee(code, name) VALUES('001', 'jing');
 
 
 self 表示当前实例
@@ -41,3 +42,12 @@ Config Driven
 Drools 配置化管理 https://www.drools.org/ 配置驱动程序，业务变动只需要更改配置，而不用更改代码
 
 Django
+
+- 项目中一般不会实现真正的删除功能，只是做了一个标记，是逻辑删除，并不是物理删除
+- 若元祖里只有一个值，则要加一个多余的逗号，如：cursor.execute(sql, (id,))，当然也可以不适用元组，使用 list 也可以，如 cursor.execute(sql, [id])
+
+- pip install aiohttp
+- pip install jinja2
+
+- 如果是跳转页面的 url 则以 `ui` 为前缀
+- 如果是访问后台接口的 url 则以 `services` 为前缀
